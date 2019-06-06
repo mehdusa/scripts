@@ -1,0 +1,7 @@
+//to search if there a bad sector
+
+sudo badblocks -v /dev/sda1 > bacd-blocks-result
+
+if there a bad sector repaire it with 
+
+sudo fsck -t ext4 -l badblocks-result /dev/sda1
